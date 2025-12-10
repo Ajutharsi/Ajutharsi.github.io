@@ -29,7 +29,6 @@
       overflow-x: hidden;
     }
     
-    /* Navigation */
     .navbar {
       background: rgba(255, 255, 255, 0.95);
       backdrop-filter: blur(10px);
@@ -58,7 +57,6 @@
       color: var(--primary) !important;
     }
     
-    /* Hero Section */
     .hero {
       background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
       color: white;
@@ -167,7 +165,6 @@
       opacity: 0.8;
     }
     
-    /* Section Styles */
     section {
       padding: 80px 0;
     }
@@ -198,7 +195,6 @@
       margin-bottom: 3rem;
     }
     
-    /* About Section */
     #about {
       background: var(--light);
     }
@@ -245,7 +241,6 @@
       margin-top: 0.5rem;
     }
     
-    /* Skills Section */
     .skills-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -300,7 +295,6 @@
       color: white;
     }
     
-    /* Projects Section */
     #projects {
       background: var(--light);
     }
@@ -380,7 +374,6 @@
       color: var(--accent);
     }
     
-    /* Experience Section */
     .timeline {
       position: relative;
       padding-left: 3rem;
@@ -462,7 +455,6 @@
       font-weight: bold;
     }
     
-    /* Education Section */
     #education {
       background: var(--light);
     }
@@ -480,6 +472,7 @@
       border-radius: 16px;
       box-shadow: 0 4px 20px rgba(0,0,0,0.08);
       transition: all 0.3s ease;
+      border-left: 4px solid var(--primary);
     }
     
     .education-card:hover {
@@ -510,7 +503,12 @@
       margin: 0.3rem 0;
     }
     
-    /* Contact Section */
+    .education-institution {
+      font-weight: 600;
+      color: var(--primary);
+      margin-top: 0.5rem;
+    }
+    
     #contact {
       background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
       color: white;
@@ -539,6 +537,7 @@
       border-radius: 16px;
       text-align: center;
       transition: all 0.3s ease;
+      border: 1px solid rgba(255, 255, 255, 0.2);
     }
     
     .contact-item:hover {
@@ -549,11 +548,13 @@
     .contact-icon {
       font-size: 2.5rem;
       margin-bottom: 1rem;
+      opacity: 0.9;
     }
     
     .contact-item h5 {
       font-weight: 600;
       margin-bottom: 0.5rem;
+      font-size: 1.1rem;
     }
     
     .contact-item a {
@@ -561,13 +562,19 @@
       text-decoration: none;
       opacity: 0.9;
       transition: opacity 0.3s ease;
+      word-break: break-all;
     }
     
     .contact-item a:hover {
       opacity: 1;
+      text-decoration: underline;
     }
     
-    /* Footer */
+    .contact-item p {
+      margin: 0;
+      opacity: 0.9;
+    }
+    
     footer {
       background: var(--dark);
       color: white;
@@ -575,7 +582,10 @@
       padding: 2rem 0;
     }
     
-    /* Animations */
+    footer p {
+      margin: 0;
+    }
+    
     @keyframes fadeInUp {
       from {
         opacity: 0;
@@ -587,7 +597,6 @@
       }
     }
     
-    /* Responsive */
     @media (max-width: 768px) {
       .hero h1 {
         font-size: 2.5rem;
@@ -608,6 +617,10 @@
       .timeline {
         padding-left: 2rem;
       }
+      
+      .about-stats {
+        grid-template-columns: 1fr;
+      }
     }
     
     .scroll-top {
@@ -627,6 +640,7 @@
       transition: all 0.3s ease;
       opacity: 0;
       pointer-events: none;
+      z-index: 999;
     }
     
     .scroll-top.visible {
@@ -642,7 +656,6 @@
 </head>
 <body>
 
-  <!-- Navigation -->
   <nav class="navbar navbar-expand-lg">
     <div class="container">
       <a class="navbar-brand" href="#">TK</a>
@@ -662,7 +675,6 @@
     </div>
   </nav>
 
-  <!-- Hero Section -->
   <section class="hero">
     <div class="hero-content">
       <h1>Tharsika Kailayapathy</h1>
@@ -673,14 +685,13 @@
         <a href="#projects" class="btn-hero btn-outline-custom">View Projects</a>
       </div>
       <div class="social-links">
-        <a href="https://github.com/Ajutharsi" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/tharsika-kailayapathy-28998027b/" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="mailto:kirutharsi999@gmail.com"><i class="fas fa-envelope"></i></a>
+        <a href="https://github.com/Ajutharsi" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/tharsika-kailayapathy-28998027b/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:kirutharsi999@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
       </div>
     </div>
   </section>
 
-  <!-- About Section -->
   <section id="about">
     <div class="container">
       <h2 class="section-title">About Me</h2>
@@ -713,7 +724,6 @@
     </div>
   </section>
 
-  <!-- Skills Section -->
   <section id="skills">
     <div class="container">
       <h2 class="section-title">Skills & Technologies</h2>
@@ -788,7 +798,6 @@
     </div>
   </section>
 
-  <!-- Projects Section -->
   <section id="projects">
     <div class="container">
       <h2 class="section-title">Featured Projects</h2>
@@ -851,7 +860,6 @@
     </div>
   </section>
 
-  <!-- Experience Section -->
   <section id="experience">
     <div class="container">
       <h2 class="section-title">Work Experience</h2>
@@ -860,7 +868,4 @@
         <div class="timeline-item">
           <div class="timeline-content">
             <div class="timeline-date"><i class="fas fa-calendar-alt"></i> August 2023 – Present</div>
-            <h4>Software Engineer</h4>
-            <h5>Oyslans Software Solution (Pvt) Limited</h5>
-            <ul>
-              <li>Developed and maintained multiple .NET desktop applications and Laravel
+            <h4>
